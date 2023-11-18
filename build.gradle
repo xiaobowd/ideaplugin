@@ -1,7 +1,8 @@
+// https://zhuanlan.zhihu.com/p/634452318#:
+
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
-    id 'org.jetbrains.intellij' version '1.15.0'
+    id 'org.jetbrains.intellij' version '1.13.3'
 }
 
 group = "com.xiaobowd"
@@ -25,7 +26,8 @@ dependencies {
 }
 
 intellij {
-    version = '2023.2.5'
+    //https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html#intellij-extension-version
+    version = '2022.1.1'
     type = 'IU' // Target IDE Platform
     plugins = ['com.intellij.java']
 }
@@ -36,6 +38,6 @@ tasks.withType(JavaCompile) {
 }
 
 patchPluginXml {
-    sinceBuild = '232'
+    sinceBuild = '221'
     untilBuild = '232.*'
 }
